@@ -1,16 +1,73 @@
-# React + Vite
+# SkyWave Flight Booking Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+SkyWave is a multi-page flight booking landing experience built with React and Vite. It highlights a hero video, flight search UI, premium lounge, traveler reviews, and a simple signup flow with smooth AOS animations.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Multi-page layout with React Router and persistent navbar/footer
+- Hero video, destination cards, promo banner, and traveler reviews
+- Reusable sections: search, stats, support, lounge, info, subscribe
+- Responsive layout with mobile navigation and grid breakpoints
+- AOS animation-on-scroll throughout the UI
 
-## React Compiler
+## Pages & Routes
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- `/` Landing page (hero, search, sections)
+- `/search` Search experience + stats/brands
+- `/info` Popular routes + promo
+- `/lounge` Premium lounge + support
+- `/support` Support highlights + stats
+- `/travelers` Reviews + routes
+- `/signup` Account creation form
+- `*` Not found page
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React 19
+- Vite 8
+- React Router 7
+- AOS (Animate on Scroll)
+- React Icons
+
+## Getting Started
+
+1. Install dependencies
+
+```bash
+npm install
+```
+
+2. Start the dev server
+
+```bash
+npm run dev
+```
+
+3. Build for production
+
+```bash
+npm run build
+```
+
+4. Preview the production build
+
+```bash
+npm run preview
+```
+
+## Project Structure
+
+- `src/App.jsx`: routing and AOS setup
+- `src/pages/`: page compositions for each route
+- `src/components/`: reusable UI sections
+- `src/components/components.css`: main styling for sections
+- `public/videos/`: hero and lounge background videos
+
+## Notes
+
+- Videos are loaded from `public/videos` and are referenced directly in components.
+- The search form is UI-only and does not submit data.
+
+## License
+
+This project is for learning and demonstration purposes.
